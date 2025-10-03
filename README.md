@@ -1,98 +1,192 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+<div align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1n8EUB4j1gHTEYNLvUSuCX6OSBprp01jz" alt="SafeNest Logo" width="400">
+  <h1>SAFENEST SEGUROS</h1>
+  <p><em>Protegendo seu amanhã, hoje</em></p>
+</div>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+---
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## 1. Visão Geral
 
-## Description
+**SafeNest** é uma plataforma de gestão de seguros de vida, construída usando NestJS, TypeORM e MySQL. Com ela, é possível gerenciar clientes, apólices, beneficiários e sinistros, garantindo segurança, confiabilidade e escalabilidade.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+### 1.1 Sobre o Desenvolvimento
+Este projeto foi desenvolvido como parte do **Bootcamp Generation Brasil**, demonstrando a aplicação dos conceitos aprendidos durante o programa de formação em desenvolvimento full-stack.
 
-## Project setup
 
-```bash
-$ npm install
-```
+## 🏠 SAFENEST SEGUROS
 
-## Compile and run the project
+1. Visão Geral
+SafeNest é uma plataforma de gestão de seguros de vida, construída usando NestJS, TypeORM e MySQL. Com ela, é possível gerenciar clientes, apólices, beneficiários e sinistros, garantindo segurança, confiabilidade e escalabilidade.
 
-```bash
-# development
-$ npm run start
+1.1 Sobre o Desenvolvimento
+Este projeto foi desenvolvido como parte do Bootcamp Generation Brasil, demonstrando a aplicação dos conceitos aprendidos durante o programa de formação em desenvolvimento full-stack.
 
-# watch mode
-$ npm run start:dev
+2. 🛠 Tecnologias Utilizadas
+Node.js / TypeScript
 
-# production mode
-$ npm run start:prod
-```
+NestJS — framework para aplicações escaláveis do lado do servidor
 
-## Run tests
+TypeORM — ORM para trabalhar com banco relacional
 
-```bash
-# unit tests
-$ npm run test
+MySQL — banco de dados relacional
 
-# e2e tests
-$ npm run test:e2e
+bcryptjs — para hash e verificação de senhas, garantindo segurança dos usuários
 
-# test coverage
-$ npm run test:cov
-```
+class-validator / class-transformer — validação de dados de entrada e transformação de objetos
 
-## Deployment
+Outras configurações de tooling: ESLint, Prettier, tsconfig, etc.
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+## 3. 📁 Estrutura de Pastas
+````
+safenest/
+├── 📁 src/
+│   ├── 📁 modules/
+│   │   ├── 📁 apolice/
+│   │   │   ├── apolice.controller.ts
+│   │   │   ├── apolice.entity.ts
+│   │   │   ├── apolice.service.ts
+│   │   │   └── apolice.module.ts
+│   │   ├── 📁 categoria/
+│   │   │   ├── categoria.controller.ts
+│   │   │   ├── categoria.entity.ts
+│   │   │   ├── categoria.service.ts
+│   │   │   └── categoria.module.ts
+│   │   └── 📁 usuario/
+│   │       ├── usuario.controller.ts
+│   │       ├── usuario.entity.ts
+│   │       ├── usuario.service.ts
+│   │       └── usuario.module.ts
+│   ├── app.module.ts
+│   └── main.ts
+├── 📁 dist/
+├── 📁 node_modules/
+├── 📁 test/
+├── .gitignore
+├── .prettierrc
+├── eslint.config.mjs
+├── nest-cli.json
+├── package.json
+├── package-lock.json
+├── README.md
+├── tsconfig.build.json
+└── tsconfig.json
+````
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+Descrição da estrutura:
 
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
-```
+src/modules/ - Módulos da aplicação organizados por funcionalidade
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+src/modules/apolice/ - Tudo relacionado a apólices de seguro
 
-## Resources
+src/modules/categoria/ - Categorização dos seguros
 
-Check out a few resources that may come in handy when working with NestJS:
+src/modules/usuario/ - Gestão de usuários do sistema
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+src/app.module.ts - Módulo raiz da aplicação
 
-## Support
+src/main.ts - Arquivo de inicialização
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+configurações/ - Arquivos de configuração do projeto
 
-## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## 4. 🚀 Instalação e Execução
 
-## License
+Pré-requisitos
+Node.js instalado (versão 16 ou superior)
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+MySQL configurado (com banco de dados disponível)
+
+Passos
+Clonar o repositório
+
+bash
+git clone https://github.com/Grupo-05-Turma-JavaScript-09/SafeNest.git
+Entrar no diretório do projeto
+
+bash
+cd SafeNest
+Instalar dependências
+
+bash
+npm install
+Configurar variáveis de ambiente
+
+bash
+# Criar arquivo .env na raiz do projeto
+DATABASE_HOST=localhost
+DATABASE_PORT=4000
+DATABASE_USER=seu_usuario
+DATABASE_PASSWORD=sua_senha
+DATABASE_NAME=safenest
+Para rodar em modo de desenvolvimento
+
+bash
+npm run start:dev
+Para rodar produção
+
+
+
+
+
+## 5. 📡 Endpoints
+
+- Módulo Categorias
+Método	Endpoint
+Descrição
+GET	/categorias	Retorna todas as categorias cadastradas
+GET	/categorias/:id	Retorna categoria por ID
+POST	/categorias	Cria nova categoria
+PUT	/categorias/:id	Atualiza categoria por ID
+DELETE	/categorias/:id	Remove categoria por ID
+
+- Módulo Usuários
+Método	Endpoint
+Descrição
+POST	/usuarios	Cria um novo usuário com os dados enviados
+GET	/usuarios	Retorna todos os usuários cadastrados
+GET	/usuarios/:id	Retorna um usuário específico pelo ID
+PUT	/usuarios	Atualiza um usuário existente com os dados
+
+- Módulo Apólices
+Método	Endpoint
+Descrição
+GET	/apolices	Retorna todas as apólices
+GET	/apolices/:id	Retorna apólice por ID
+POST	/apolices	Cria nova apólice
+PUT	/apolices	Atualiza apólice
+PUT	/apolices/:id/desconto	Aplica desconto a apólice por ID
+DELETE	/apolices/:id	Remove apólice por ID
+
+## 6. 👥 Contribuição
+
+Como contribuir:
+Faça um fork do repositório
+
+Crie uma branch: feature/nome-da-feature
+
+Crie commits claros e informativos
+
+Abra um pull request descrevendo as alterações
+
+Adicione testes e documentação quando possível
+
+## Equipe de Desenvolvimento:
+
+- Adrya Giuly -	CRUD de Categorias, merge do projeto e testes no Insomnia
+- Ayron Santana	- Entity e módulo da apólice
+- Emily Mangas -Usuario controller / usuario service
+- Eric Silva - Controller e Service da apólice
+- Flavio Serra - Relacionamento entre classes (Categoria) e documentação
+- Paula Melo - Estrutura do projeto, usuario entity/module + bcrypt, logo
+- Sthefany Mattos -	Scrum, identidade visual, apresentação
+
+## 7. 🙏 Agradecimentos
+Agradecimentos especiais aos instrutores do Bootcamp Generation Brasil:
+
+Thiago - Orientação técnica e suporte
+
+Índio - Ensino e mentoria
+
+---
+"Agradecemos à Generation Brasil por esta jornada transformadora!" 🚀
