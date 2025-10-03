@@ -15,7 +15,7 @@ export class ApoliceService {
   ) {}
 
   async findAll(): Promise<Apolice[]> {
-    return this.apoliceRepository.find();
+    return this.apoliceRepository.find({ relations: ['usuario', 'categoria'] });
   }
 
   async findById(id: number): Promise<Apolice> {
@@ -48,7 +48,14 @@ export class ApoliceService {
   }
 
   async aplicarDesconto(idApolice: number): Promise<Apolice> {
-    const apolice = await this.findById(idApolice);
+    const apolice = await this.apoliceRepository.findOne({
+      where: { id: idApolice },
+      relations: ['usuario', 'categoria'],
+    });
+
+    if (!apolice) {
+      throw new NotFoundException('Apólice não encontrada. Tente novamente.');
+    }
 
     if (!apolice.usuario) {
       throw new NotFoundException('Usuário não vinculado a esta apólice.');

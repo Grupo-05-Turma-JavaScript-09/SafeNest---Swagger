@@ -7,8 +7,10 @@ import {
   BeforeUpdate,
   Column,
   Entity,
+  OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
+import { Apolice } from '../../apolice/entities/apolice.entity';
 
 //tabela id
 @Entity({ name: 'tb_usuarios' })
@@ -53,4 +55,7 @@ export class Usuario {
   async checkPassword(senhaDigitada: string): Promise<boolean> {
     return bcrypt.compare(senhaDigitada, this.senha);
   }
+
+  @OneToMany(() => Apolice, (apolice) => apolice.usuario)
+  apolices: Apolice[];
 }

@@ -7,6 +7,7 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
+import { Categoria } from '../../categoria/entities/categoria.entity';
 import { Usuario } from '../../usuario/entities/usuario.entity';
 
 @Entity({ name: 'tb_apolices' })
@@ -32,4 +33,8 @@ export class Apolice {
   @ManyToOne(() => Usuario)
   @JoinColumn({ name: 'usuario_id' })
   usuario: Usuario;
+
+  @ManyToOne(() => Categoria)
+  @JoinColumn({ name: 'categoria_id' })
+  categoria: Categoria;
 }
