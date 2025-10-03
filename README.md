@@ -13,16 +13,7 @@
 ### 1.1 Sobre o Desenvolvimento
 Este projeto foi desenvolvido como parte do **Bootcamp Generation Brasil**, demonstrando a aplicação dos conceitos aprendidos durante o programa de formação em desenvolvimento full-stack.
 
-
-## 🏠 SAFENEST SEGUROS
-
-1. Visão Geral
-SafeNest é uma plataforma de gestão de seguros de vida, construída usando NestJS, TypeORM e MySQL. Com ela, é possível gerenciar clientes, apólices, beneficiários e sinistros, garantindo segurança, confiabilidade e escalabilidade.
-
-1.1 Sobre o Desenvolvimento
-Este projeto foi desenvolvido como parte do Bootcamp Generation Brasil, demonstrando a aplicação dos conceitos aprendidos durante o programa de formação em desenvolvimento full-stack.
-
-2. 🛠 Tecnologias Utilizadas
+## 2. 🛠 Tecnologias Utilizadas
 Node.js / TypeScript
 
 NestJS — framework para aplicações escaláveis do lado do servidor
