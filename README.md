@@ -91,32 +91,29 @@ MySQL configurado (com banco de dados disponível)
 Passos
 Clonar o repositório
 
-bash
+
 git clone https://github.com/Grupo-05-Turma-JavaScript-09/SafeNest.git
 Entrar no diretório do projeto
 
-bash
-cd SafeNest
-Instalar dependências
 
-bash
-npm install
-Configurar variáveis de ambiente
+- cd SafeNest
+- Instalar dependências
 
-bash
+ 
+- npm install
+- Configurar variáveis de ambiente
+
+
+- Para rodar em modo de desenvolvimento
+- npm run start:dev
+
+--
 # Criar arquivo .env na raiz do projeto
 DATABASE_HOST=localhost
 DATABASE_PORT=4000
 DATABASE_USER=seu_usuario
 DATABASE_PASSWORD=sua_senha
 DATABASE_NAME=safenest
-Para rodar em modo de desenvolvimento
-
-bash
-npm run start:dev
-Para rodar produção
-
-
 
 
 
