@@ -11,7 +11,9 @@ import {
 } from '@nestjs/common';
 import { Usuario } from '../entities/usuario.entity';
 import { UsuarioService } from '../services/usuario.service';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Usuario')
 @Controller('/usuarios') // Define o prefixo de rota: /usuarios
 export class UsuarioController {
   constructor(private readonly usuarioService: UsuarioService) {}

@@ -11,32 +11,38 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { Apolice } from '../../apolice/entities/apolice.entity';
+import { ApiProperty } from '@nestjs/swagger';
 
 //tabela id
 @Entity({ name: 'tb_usuarios' })
 export class Usuario {
   @PrimaryGeneratedColumn('increment')
+  @ApiProperty()
   id: number;
 
   //nome da pessoa
   @IsNotEmpty({ message: 'O nome não pode ser vazio.' })
   @Column({ length: 155, nullable: false })
+  @ApiProperty()
   nome: string;
 
   //usuario q vai entrar
   @IsNotEmpty({ message: 'O usuário não pode ser vazio.' })
   @Column({ length: 255, nullable: false, unique: true })
+  @ApiProperty()
   usuario: string;
 
   // Apenas o hash será salvo no banco
   @Exclude()
   @IsNotEmpty({ message: 'A senha não pode ser vazia.' })
   @Column({ length: 255, nullable: false })
+  @ApiProperty()
   senha: string;
 
   @IsNotEmpty({ message: 'A idade não pode ser vazia.' })
   @IsInt({ message: 'A idade deve ser um número inteiro.' })
   @Column({ nullable: false })
+  @ApiProperty()
   idade: number;
 
   // FUNÇÕES DE SEGURANÇA COM BCRYPT

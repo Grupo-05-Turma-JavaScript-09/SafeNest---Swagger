@@ -13,7 +13,8 @@ import {
 
 import { Apolice } from '../entities/apolice.entity';
 import { ApoliceService } from '../services/apolice.service';
-
+import { ApiTags } from '@nestjs/swagger';
+@ApiTags('Apolice')
 @Controller('/apolices')
 export class ApoliceController {
   constructor(private readonly apoliceService: ApoliceService) {}
