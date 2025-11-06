@@ -62,6 +62,7 @@ export class Usuario {
     return bcrypt.compare(senhaDigitada, this.senha);
   }
 
+  @ApiProperty()
   @OneToMany(() => Apolice, (apolice) => apolice.usuario)
   apolices: Apolice[];
 }
