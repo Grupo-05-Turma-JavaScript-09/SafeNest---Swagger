@@ -15,12 +15,15 @@ export class ApoliceService {
   ) {}
 
   async findAll(): Promise<Apolice[]> {
-    return this.apoliceRepository.find({ relations: ['usuario', 'categoria'] });
+    return this.apoliceRepository.find({
+      relations: ['usuario', 'categoria'],
+    });
   }
 
   async findById(id: number): Promise<Apolice> {
     const apolice = await this.apoliceRepository.findOne({
-      where: { id: id },
+      where: { id },
+      relations: ['usuario', 'categoria'],
     });
 
     if (!apolice) {
@@ -47,9 +50,9 @@ export class ApoliceService {
     await this.apoliceRepository.remove(apolice);
   }
 
-  async aplicarDesconto(idApolice: number): Promise<Apolice> {
+  async aplicarDesconto(id: number): Promise<Apolice> {
     const apolice = await this.apoliceRepository.findOne({
-      where: { id: idApolice },
+      where: { id },
       relations: ['usuario', 'categoria'],
     });
 
